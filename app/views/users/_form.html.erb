@@ -1,0 +1,41 @@
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :username %> <br>
+    <%= form.text_field :username %>
+    <% @user.errors.full_messages_for(:username).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :firstname %> <br>
+    <%= form.text_field :firstname %>
+    <% @user.errors.full_messages_for(:firstname).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :lastname %> <br>
+    <%= form.text_field :lastname %>
+    <% @user.errors.full_messages_for(:lastname).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :email %> <br>
+    <%= form.text_field :email %>
+    <% @user.errors.full_messages_for(:email).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :encrypted_password %> <br>
+    <%= form.text_field :encrypted_password %>
+    <% @user.errors.full_messages_for(:encrypted_password).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
