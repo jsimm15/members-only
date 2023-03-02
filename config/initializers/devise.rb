@@ -310,4 +310,10 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
+
+  #Manual addition to add turbo compatibility. Following directions found at https://www.digitalocean.com/community/tutorials/how-to-set-up-user-authentication-with-devise-in-a-rails-7-application
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
+
+
 end
