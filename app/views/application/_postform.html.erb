@@ -8,6 +8,7 @@
       <%= form.label :body %> <br>
       <%= form.text_area :body %>
     </p>
+      <%= form.hidden_field :author, value: current_user.username %>
     <p>
       <%= form.submit %>
     </p>

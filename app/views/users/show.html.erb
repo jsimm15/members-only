@@ -28,6 +28,10 @@
       <strong>Content:</strong>
       <%= post.body %>
     </p>
+    <p>
+      <strong>Author:</strong>
+      <%= post.author %>
+    </p>
   <% end %>
 
 <%= render "postform", user: @user, post: @post %>

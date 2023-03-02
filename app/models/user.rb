@@ -10,6 +10,6 @@ class User < ApplicationRecord
   # validates :email, presence: true
   # validates :encrypted_password, presence: true
 
-  has_many :posts
+  has_many :posts, :foreign_key => "user_id"
 
 end
